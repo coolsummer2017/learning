@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css demo</title>
+    <style>
+        #banner {
+            border-bottom: 3px dashed pink;
+        }
+        
+        h2 {
+            font-size: 17px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 15px;
+            width: 250px;
+        }
+        
+        li {
+            list-style: none;
+            /*overflow: hidden;*/
+            zoom: 1;
+        }
+        
+        li::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        li .icon,
+        li .con {
+            float: left;
+        }
+        
+        li .right {
+            float: right;
+            position: relative;
+            text-align: right;
+        }
+        
+        ul {
+            padding: 0;
+            width: 250px;
+        }
+        
+        li .con {
+            width: 120px;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+        
+        p {
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+        
+        .right button {
+            display: block;
+        }
+        
+        .qr-big {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            z-index: 10;
+        }
+        
+        .qr:hover+.qr-big {
+            display: block;
+        }
+        
+        .qr {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hd">
+        <img src="/images/ad.jpg" alt="ad pic" id="banner">
+    </div>
+    <div class="bd">
+        <h2>应用推荐</h2>
+        <ul>
+            <li class="icon">
+                <img src="/images/icon1.png" alt="icon1" class="icon">
+                <div class="con">
+                    <h3>网易有道词典</h3>
+                    <p>最好用的免费全能翻译软件，拥有5亿用户。</p>
+                </div>
+                <div class="right">
+                    <img src="/images/qr_small.png" alt="qr_small" class="qr">
+                    <img src="/images/qr.png" alt="qr" class="qr-big">
+                    <button id="btn1">下载</button>
+                </div>
+            </li>
+            <li>
+                <img src="/images/icon2.png" alt="icon2" class="icon">
+                <div class="con">
+                    <h3>有道翻译官</h3>
+                    <p>网易旗下翻译APP，52种语言随身翻译。</p>
+                </div>
+                <div class="right">
+                    <img src="/images/qr_small.png" alt="qr_small" class="qr">
+                    <img src="/images/qr.png" alt="qr" class="qr-big">
+                    <button id="btn2">下载</button>
+                </div>
+            </li>
+            <li>
+                <img src="/images/icon3.png" alt="icon3" class="icon">
+                <div class="con">
+                    <h3>有道语文达人</h3>
+                    <p>500万权威词条，古诗文言文翻译神器。</p>
+                </div>
+                <div class="right">
+                    <img src="/images/qr_small.png" alt="qr_small" class="qr">
+                    <img src="/images/qr.png" alt="qr" class="qr-big">
+                    <button id="btn3">下载</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var btn3 = document.getElementById("btn3");
+        var btn2 = document.getElementById("btn2");
+        var btn1 = document.getElementById("btn1");
+
+        function bindEvent(btn) {
+            btn.onclick = function() {
+                alert("下载成功");
+            }
+        }
+
+        bindEvent(btn1);
+        bindEvent(btn2);
+        bindEvent(btn3);
+
+    </script>
+</body>
+
+</html>
