@@ -1,0 +1,12 @@
+ls 	 # 查看目录
+cd	# 切换目录
+su	#使用超级用户
+cat	#查看文件
+touch	#创建文件
+echo 	#打印内容
+reboot	#重启
+vi 文件名		#编辑文件
+kate 文件名	#编辑文件
+mkdir  	#创建目录
+rm filename  #删除文件
+rm -r 文件夹 	#删除文件夹
